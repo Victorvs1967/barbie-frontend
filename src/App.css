@@ -1,38 +1,66 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffe1f0;
+  font-family: sans-serif;
+}
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-size: 36px;
   text-align: center;
+  color: #d60093;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-list {
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #d60093;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.movie-title {
+  font-size: 24px;
+  color: #d60093;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-details {
+  margin: 5px 0;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-synopsis {
+  font-style: italic;
+}
+
+.random-button {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #d60093;
+}
+
+.random-movie {
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #d60093;
+}
+
+.random-title {
+  font-size: 20px;
+  color: #d60093;
 }
