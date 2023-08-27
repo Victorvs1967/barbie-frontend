@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
+// const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'http://victorvs.pythonanywhere.com';
+
 const App = () => {
   const [ movies, setMovies ] = useState([]);
   const [ randomMovie, setRandomMovie ] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/movies')
+    axios.get(BASE_URL.concat('/api/movies'))
       .then(response => setMovies(response.data))
       .catch(error => console.error(error))
   }, []);
