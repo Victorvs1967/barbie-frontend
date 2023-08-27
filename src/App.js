@@ -16,8 +16,12 @@ const App = () => {
   }, []);
 
   const handleRandomMovie = () => {
-    const randomIndex = Math.floor(Math.random() * movies.length);
-    setRandomMovie(movies[randomIndex]);
+    axios.get(BASE_URL.concat('/api/random_movie'))
+      .then(response => setRandomMovie(response.data))
+      .catch(error => console.error(error));
+
+    // const randomIndex = Math.floor(Math.random() * movies.length);
+    // setRandomMovie(movies[randomIndex]);
   };
 
   return (
